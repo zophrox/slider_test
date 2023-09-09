@@ -10,8 +10,6 @@ function loadShow() {
   item[active].style.filter = "none";
   item[active].style.opacity = 1;
   item[active].style.transition = "all 0.3s 0.2s ease-out";
-  //   item[active].style.opacity = 1;
-  //   item[active].style.opacity = 1;
   for (let i = active + 1; i < item.length; i++) {
     stt++;
     item[i].style.transform = `translateX(${200 * stt}px) scale(${
@@ -36,14 +34,24 @@ function loadShow() {
 }
 loadShow();
 
-function setSlides(num) {
-  active =
-    active + num < item.length || active + num == -1 ? active + num : active;
-  loadShow();
-  console.log(active);
-}
-// next.onclick = function setSlides() {
-//   active = active + 1 < item.length ? active + 1 : active;
+// function setSlides(num) {
+//   if (active + num < item.length) {
+//     active += num;
+//   }
+//   if (active === -1) {
+//     active = 0;
+//   } else {
+//     active = active;
+//   }
 //   loadShow();
-//   console.log("I am button");
-// };
+// }
+next.onclick = function setSlides() {
+  active = active + 1 < item.length ? active + 1 : active;
+  loadShow();
+  console.log("I am button next");
+};
+previous.onclick = function setSlides() {
+  active = active - 1 >= 0 ? active - 1 : active;
+  loadShow();
+  console.log("I am button previous");
+};
