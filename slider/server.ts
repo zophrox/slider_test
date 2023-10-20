@@ -9,6 +9,7 @@ const app = express();
 app.use('/images',express.static('slider/images'))
 app.use('/style.css',express.static('slider/style.css'))
 app.use('/slider-test1.js',express.static('slider/slider-test1.js'))
+app.use('/slider-test2.js',express.static('slider/slider-test2.js'))
 
 
 app.get('/',(req,res)=>{
