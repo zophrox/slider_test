@@ -6,4 +6,4 @@ Type 'npm run dev' in the terminal and use localhost:3000
 
 
 ##GIF
-![](SliderGif.gif)
+![slider`s gif](SliderGif.gif)
