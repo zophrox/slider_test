@@ -1,4 +1,4 @@
-let item = document.querySelectorAll(".images-slideshow .imageSlides");
+let item = document.querySelectorAll(".images-slideshow .image-slides");
 let next = document.querySelector(".next");
 let previous = document.querySelector(".previous");
 
@@ -44,14 +44,14 @@ setInterval(() => {
   let lastImg = indexItem.pop();
   indexItem.unshift(lastImg);
   loadShow();
-}, 7000);
+}, 4000);
 next.onclick = () => {
   let lastImg = indexItem.pop();
   indexItem.unshift(lastImg);
   loadShow();
   console.log(indexItem);
 };
-previous.onclick = () => {
+previous.onclick = () =>                                       {
   let lastImg = indexItem.shift();
   indexItem.push(lastImg);
   loadShow();

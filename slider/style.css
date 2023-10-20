@@ -14,7 +14,7 @@ body {
   overflow: hidden;
 }
 
-.imageSlides {
+.image-slides {
   position: absolute;
   width: 600px;
   height: 450px;
